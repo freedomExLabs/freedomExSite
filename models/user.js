@@ -7,8 +7,7 @@ const userSchema = mongoose.Schema({
   role: { type: String, default: 'user' }, // ['admin', 'user']
   points: Number,
   userAddress: String,
-  questionViews: Number,
-  answerViews: Number,
+  userListingIds: Array,
   passHash: String,
 });
 

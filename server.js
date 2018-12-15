@@ -11,18 +11,15 @@ var validator = require('validator');
 var axios = require('axios');
 
 //Schemas:
-const User = require('./models/user.js');
+// const User = require('./models/user.js');
 
 
-app.get('/ping', function (req, res) {
- return res.send('pong');
-});
-
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+// app.get('/ping', function (req, res) {
+//  return res.send('pong');
+// });
 
 
+/*
 app.post('/api/user/inviteEmail', (req, res) => {
 
 	// save the user and resolve the user doc
@@ -61,5 +58,10 @@ setInterval(function() {
       });
 }, 300000); // every 5 minutes (300000)
 
+*/
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 app.listen(process.env.PORT || 8080);
