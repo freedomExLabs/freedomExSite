@@ -89,6 +89,26 @@ class AllItems extends Component {
           </div>
         </div>
 
+        <div className={`modal ${this.state.open ? 'is-active' : ''}`}>
+          <div className="modal-background" onClick={() => {this.setState({open: false})}}></div>
+          <div className="modal-card">
+            <header className="modal-card-head">
+              <p className="modal-card-title">{this.state.allItems[this.state.numExpanded].title}</p>
+              <button className="delete button button-medium is-info" aria-label="close" onClick={() => {this.setState({open: false})}}></button>
+            </header>
+            <section className="modal-card-body">
+              s;lkdfjsadlkfjsdk;lfjlksdfjs
+              sdf
+              sadfs
+              dfsafsdsadfa
+            </section>
+            <footer className="modal-card-foot">
+              <a className="button button-medium is-primary" href={this.state.allItems[this.state.numExpanded].joinLink} target='_blank'>Purchase</a>
+              <a className="button button-medium button-white" onClick={() => {this.setState({open: false})}}>Cancel</a>
+            </footer>
+          </div>
+        </div>
+
         <br/>
         <br/>
         <br/>
